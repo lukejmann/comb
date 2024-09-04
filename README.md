@@ -1,4 +1,4 @@
-Remove most comments, keeping the important ones (TODO, FIXME, NOTE, triple slash). Forked from [plibither8] (https://github.com/plibither8/vscode-remove-comments) with some upgrades.
+Remove most comments, keeping the important ones (TODO, FIXME, NOTE, triple slash). Forked from [plibither8](https://github.com/plibither8/vscode-remove-comments) with some upgrades.
 
 
 ## To use
