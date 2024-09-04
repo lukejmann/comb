@@ -1,0 +1,88 @@
+{
+    "name": "comb",
+    "displayName": "Comb",
+    "description": "Remove most comments, keeping the important ones (TODO, FIXME, NOTE, triple slash). Original forked from https://github.com/plibither8/vscode-remove-comments with some upgrades",
+    "version": "1.2.3",
+    "publisher": "lukejmann",
+    "license": "MIT",
+    "icon": "assets/icon.png",
+    "author": {
+        "name": "Luke Mann"
+    },
+    "repository": {
+        "type": "git"
+    },
+    "engines": {
+        "vscode": "^1.74.0"
+    },
+    "categories": [
+        "Formatters"
+    ],
+    "keywords": [
+        "comment",
+        "comments",
+        "delete",
+        "remove"
+    ],
+    "activationEvents": [
+        "onCommand:extension.removeAllComments",
+        "onCommand:extension.removeSingleLineComments",
+        "onCommand:extension.removeMultilineComments"
+    ],
+    "gallaryBanner": {},
+    "main": "./out/extension.js",
+    "contributes": {
+        "configuration": {
+            "title": "Remove Comments configuration",
+            "properties": {
+                "remove-comments.multilineComments": {
+                    "type": "boolean",
+                    "default": true
+                }
+            }
+        },
+        "commands": [
+            {
+                "command": "extension.removeAllComments",
+                "title": "Remove All Comments"
+            },
+            {
+                "command": "extension.removeSingleLineComments",
+                "title": "Remove All Single Line Comments"
+            },
+            {
+                "command": "extension.removeMultilineComments",
+                "title": "Remove All Multiline Comments"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./ || true",
+        "lint": "eslint \"src/**/*.ts\"",
+        "watch": "tsc -watch -p ./ || true",
+        "pretest": "npm run compile",
+        "test": "node ./out/test/runTests.js"
+    },
+    "devDependencies": {
+        "@types/glob": "^7.1.1",
+        "@types/mocha": "^10.0.1",
+        "@types/node": "^18",
+        "@types/vscode": "^1.73.0",
+        "@typescript-eslint/eslint-plugin": "^7.14.0",
+        "@typescript-eslint/parser": "^7.14.0",
+        "@vscode/test-cli": "^0.0.10",
+        "@vscode/test-electron": "^2.4.1",
+        "eslint": "^8.26.0",
+        "glob": "^7.1.4",
+        "mocha": "^10.2.0",
+        "source-map-support": "^0.5.12",
+        "ts-node": "^10.4.0",
+        "tslint": "^5.8.0",
+        "typescript": "^5.5.2",
+        "vscode-test": "^1.6.1"
+    },
+    "dependencies": {
+        "vscode": "^1.1.37"
+    }
+}
