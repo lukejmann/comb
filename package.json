@@ -1,8 +1,8 @@
 {
     "name": "comb",
     "displayName": "Comb",
-    "description": "Remove most comments, keeping the important ones (TODO, FIXME, NOTE, triple slash). Original forked from https://github.com/plibither8/vscode-remove-comments with some upgrades",
-    "version": "1.2.3",
+    "description": "Remove most comments including triple slash (///), keeping only the important ones (TODO, FIXME, NOTE). Also preserves URLs like http:// and https://. Original forked from https://github.com/plibither8/vscode-remove-comments with some upgrades",
+    "version": "1.3.0",
     "publisher": "lukejmann",
     "license": "MIT",
     "icon": "assets/icon.png",
@@ -80,10 +80,6 @@
         "ts-node": "^10.4.0",
         "tslint": "^5.8.0",
         "typescript": "^5.5.2",
-        "vscode-test": "^1.6.1",
-        "vscode": "^1.1.37"
-
-    },
-    "dependencies": {
+        "vscode-test": "^1.6.1"
     }
 }

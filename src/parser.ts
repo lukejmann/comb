@@ -17,7 +17,7 @@ export class Parser {
       this.uri = activeEditor.document.uri;
     } else {
       vscode.window.showInformationMessage(
-        "Cannot remove comments : unknown language (" + languageCode + ")"
+        "Cannot remove comments : unknown language (" + languageCode + ")",
       );
     }
   }
@@ -74,7 +74,7 @@ export class Parser {
       if (!/TODO:|NOTE:|FIXME|^\/\/\/|^\{\//.test(match[0])) {
         let startPos = activeEditor.document.positionAt(match.index);
         let endPos = activeEditor.document.positionAt(
-          match.index + match[0].length
+          match.index + match[0].length,
         );
         let range = new vscode.Range(startPos, endPos);
         this.edit.delete(uri, range);
@@ -89,7 +89,7 @@ export class Parser {
       matches.forEach((match) => {
         const startPos = activeEditor.document.positionAt(text.indexOf(match));
         const endPos = activeEditor.document.positionAt(
-          text.indexOf(match) + match.length
+          text.indexOf(match) + match.length,
         );
         this.edit.delete(this.uri!, new vscode.Range(startPos, endPos));
       });
